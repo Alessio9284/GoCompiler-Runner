@@ -1,11 +1,15 @@
-@echo off
+# Creato da Alessio Torricelli
+# Mail: Alessio92845@gmail.com
 
-set /p FILE="Inserisci il nome del File go: "
+read -p "Inserisci il nome del File go: " FILE
 	
-set FILE=%FILE:.go=%
-	
-if exist %FILE%.go (
-	go build %FILE%.go
+FILE=${FILE%.*}
+
+if [ -f "${FILE}.go" ]
+then
+	echo dio bono
+	sleep 100000
+	go build $FILE.go
 	echo.
 	pause
 	cls
@@ -20,3 +24,5 @@ if exist %FILE%.go (
 	echo Programma Terminato
 	pause
 )
+
+sleep 100000

@@ -1,3 +1,6 @@
+:: Creato da Alessio Torricelli
+:: Mail: Alessio92845@gmail.com
+
 @echo off
 
 set /p FILE="Inserisci il nome del File go: "
