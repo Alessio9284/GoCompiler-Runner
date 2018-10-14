@@ -18,3 +18,26 @@ if exist %FILE%.go (
 	echo Programma Terminato
 	pause
 )
+
+if exist %FILE% (
+	go build %FILE%
+	echo.
+	pause
+	cls
+	
+	FILE=${FILE%%.*o}
+	
+	echo %FILE%
+	
+	pause
+	
+	if exist %FILE%.exe (
+		call %FILE%.exe
+	) else (
+		exit
+	)
+
+	echo.
+	echo Programma Terminato
+	pause
+)
