@@ -2,6 +2,8 @@
 
 set /p FILE="Inserisci il nome del File go: "
 	
+set FILE=%FILE:.go=%
+	
 if exist %FILE%.go (
 	go build %FILE%.go
 	echo.
